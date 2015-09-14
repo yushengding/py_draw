@@ -156,6 +156,7 @@ def add_point_to_path(path, obstacle_list):
             new_path.append(path[i])
             continue
         else:
+            m=1
             new_path.append(path[i])
             p = path[i].p + (path[i+1].p-path[i].p)*path[i].r/distance
             new_path.append(Circle(p, calculate_bubble_max_size_in_p(p, obstacle_list)))
